@@ -1,5 +1,5 @@
 # AsbelMind 🎮🧠
-![AsbelMind Banner](assets/banner02.png)
+![AsbelMind Banner](assets/Banner.png)
 
 **AsbelMind** es un sitio interactivo para aprender vocabulario de forma divertida y visual. Incluye tres modos de juego: *Flashcards*, *Speed Quiz* y *Matching Game*, cada uno diseñado para reforzar el aprendizaje con animaciones, niveles de dificultad y retroalimentación inmediata.
 
