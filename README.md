@@ -4,15 +4,9 @@
   <img 
     src="assets/Banner.png" 
     alt="AsbelMind Banner" 
-    style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: transform 0.3s ease;">
+    width="600"
+    style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
 </div>
-
-<style>
-  img:hover {
-    transform: scale(1.05);
-  }
-</style>
-
 
 **AsbelMind** es un sitio interactivo para aprender vocabulario de forma divertida y visual. Incluye tres modos de juego: *Flashcards*, *Speed Quiz* y *Matching Game*, cada uno diseñado para reforzar el aprendizaje con animaciones, niveles de dificultad y retroalimentación inmediata.
 
