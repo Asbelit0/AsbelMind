@@ -37,6 +37,8 @@
 :root{
         --bg:#f7f8fb; --card:#ffffff; --muted:#6b7280; --accent:#0ea5a4; --accent-2:#0369a1;
         --glass: rgba(255,255,255,0.6);
+        --footer-bg: #f0f0f0;
+        --footer-text: #333;
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
 
@@ -61,6 +63,9 @@
     --accent: #14b8a6;
     --accent-2: #0ea5e9;
     --glass: rgba(51, 65, 85, 0.6);
+
+    --footer-bg: #0f172a;
+    --footer-text: #94a3b8;
     }
 
     /* Tema pastel */
@@ -72,6 +77,9 @@
     --accent: #f472b6;
     --accent-2: #c084fc;
     --glass: rgba(255, 255, 255, 0.6);
+
+    --footer-bg: #fef6f9;
+    --footer-text: #4b5563;
     }
 
     /* Tema neón */
@@ -83,6 +91,9 @@
     --accent: #38bdf8;
     --accent-2: #0ea5e9;
     --glass: rgba(30, 41, 59, 0.6);
+
+    --footer-bg: #0f172a;
+    --footer-text: #e0f2fe;
     }
 
     /* Tema amanecer */
@@ -94,6 +105,9 @@
     --accent: #fbbf24;
     --accent-2: #f97316;
     --glass: rgba(255, 251, 240, 0.6);
+
+    --footer-bg: #fff7ed;
+    --footer-text: #7c2d12;
     }
 
     /* Tema cósmico */|
@@ -105,6 +119,9 @@
     --accent: #6366f1;
     --accent-2: #8b5cf6;
     --glass: rgba(28, 31, 43, 0.6);
+
+    --footer-bg: #0b0f1a;
+    --footer-text: #cbd5e1;
     }
 
     /* Tema pixelado */
@@ -116,6 +133,9 @@
     --accent: #ff004d;
     --accent-2: #29adff;
     --glass: rgba(45, 47, 79, 0.6);
+
+    --footer-bg: #1a1c2c;
+    --footer-text: #f4f4f4;
     }
 
     /* Tema bosque */
@@ -127,6 +147,9 @@
     --accent: #52b788;
     --accent-2: #40916c;
     --glass: rgba(209, 231, 221, 0.6);
+
+    --footer-bg: #e6f4ea;
+    --footer-text: #2f3e46;
     }
 
     /* Tema caramelo */
@@ -138,6 +161,9 @@
     --accent: #ff85a1;
     --accent-2: #ff3c6f;
     --glass: rgba(255, 227, 236, 0.6);
+
+    --footer-bg: #fff0f6;
+    --footer-text: #ff5d8f;
     }
 
     /* Tema monocromo */
@@ -149,6 +175,9 @@
     --accent: #555555;
     --accent-2: #000000;
     --glass: rgba(255, 255, 255, 0.6);
+
+    --footer-bg: #f5f5f5;
+    --footer-text: #333333;
     }
 
 
@@ -378,7 +407,7 @@
 }
 
 
-
+/* Trivia game styles */
 .trivia-header {
   flex-wrap: wrap;
   gap: 8px;
@@ -388,6 +417,9 @@
   font-size: 1.3rem;
   font-weight: 700;
   margin: 8px 0;
+  color: var(--text);
+  /* color: var(--accent-2); */
+  text-align: center;
 }
 
 .trivia-footer {
@@ -401,16 +433,17 @@
   .trivia-footer {
     flex-direction: column;
     align-items: stretch;
+    
   }
 
-  .trivia-word {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-
+  
   .option {
     font-size: 0.95rem;
     padding: 10px;
+    border: 1px solid rgba(2,6,23,0.04);
+    transition: background 0.3s ease, border 0.3s ease;
+    
+
   }
 
   #skip {
@@ -436,7 +469,8 @@
   padding: 10px;
   border-radius: 8px;
   border: 1px solid rgba(2,6,23,0.04);
-  background: white;
+  background-color: var(--card);
+  color: var(--text);
   cursor: pointer;
   transition: background 0.3s ease, border 0.3s ease;
 }
@@ -569,3 +603,96 @@
     font-size: 1.2rem;
   }
 }
+
+/* Footer with muted note */
+footer.muted-note {
+  background-color: var(--card); /* usa el color de tarjeta del tema */
+  color: var(--muted);           /* texto tenue del tema */
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 1px solid var(--accent-2); /* línea con color secundario */
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+footer.muted-note div {
+  margin: 6px 0;
+}
+
+footer.muted-note div:last-child {
+  color: var(--text);           /* autoría con color principal del tema */
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+footer.muted-note a {
+  color: var(--accent);         /* enlaces con color destacado */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer.muted-note a:hover {
+  color: var(--accent-2);       /* cambio de color al pasar el mouse */
+  text-decoration: underline;
+}
+
+
+/* Animations for theme toggle */
+@keyframes rotateIn {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} 
+@keyframes rotateOut {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+.theme-toggle.rotating {
+  animation: rotateIn 0.5s ease;
+}
+.theme-toggle.rotating-out {
+  animation: rotateOut 0.5s ease;
+}
+
+
+/* Smooth transitions for theme changes */
+body, .card, .btn, .tab, .option, .pair, .flashcard {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+
+/* Horizontal rule style */
+hr { border: none; border-top: 1px solid var(--muted); margin: 12px 0; }
+
+
+/* Enhanced button hover effects */
+.btn:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+.btn:active {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transform: translateY(0);
+}
+/* Enhanced input focus effects */
+input[type="text"]:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(14,165,164,0.3);
+  outline: none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+

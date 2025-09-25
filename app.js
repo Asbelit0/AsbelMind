@@ -86,6 +86,7 @@
             <div class="flex-row spaced">
                 <div>
                     <h2>Your vocabulary</h2>
+                    <br>
                     <div class="small-muted">Manage your words</div>
                 </div>
                 <div class="controls">
