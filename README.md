@@ -49,11 +49,12 @@
 git clone https://github.com/Asbelit0/AsbelMind.git
 cd AsbelMind
 ```
+---
 
 ## 🧠 Recomendaciones
 
 > [!TIP]
-> Puedes cambiar el color del tema al de tu preferencia en la sección "TOGGLE THEME".
+> Puedes cambiar el color del tema al de tu preferencia en la sección `Toggle Theme`.
 
 > [!IMPORTANT]
 > Asegúrate de clonar el repositorio en una carpeta vacía para evitar conflictos.
@@ -63,9 +64,3 @@ cd AsbelMind
 
 > [!WARNING]
 > Si cierras el navegador durante una sesión de Speed Quiz, perderás tu progreso.
-
-> [!INFO]
-> AsbelMind está optimizado para Chrome y Firefox.
-
-> [!EXPERIMENTAL]
-> Este sitio esta hecho con fines educativos personales vrg, no juzgues.
